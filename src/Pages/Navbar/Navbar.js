@@ -7,7 +7,7 @@ const Navbar = () => {
         return (
                 <nav class="navbar navbar-collapse navbar-dark bg-dark navbar-expand-lg sticky-top">
                         <div class="container">
-                                <Link class="navbar-brand fw-bold" to="/">Geniyas Car Mechanis</Link>
+                        <Link class="navbar-brand fw-bold" to="/">Geniyas Car Mechanis</Link>
                                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                         <span class="navbar-toggler-icon"></span>
                                 </button>
