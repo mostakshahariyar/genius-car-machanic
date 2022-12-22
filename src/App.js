@@ -7,21 +7,28 @@ import NotFound from './Pages/NotFound/NotFound';
 import Booking from './Pages/Booking/Booking';
 import Navbar from './Pages/Navbar/Navbar';
 import Login from './Pages/Login/Login';
+import PrivateRoute from './Pages/Login/PrivateRoute';
+import AuthProvider from './Pages/context/AuthProvider';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Navbar/>
-      <Routes>
-        <Route path='/' element={<Home/>} />
-        <Route path='/home' element={<Home/>} />
-        <Route path='/service' element={<Services/>} />
-        <Route path='/expert' element={<Esperts/>} />
-        <Route path='/login' element={<Login/>} />
-        <Route path='/booking/:serviceId' element={ <Booking/> }/>
-        <Route path='*' element={<NotFound/>} />
-      </Routes>
-    </BrowserRouter>
+    <AuthProvider>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/home' element={<Home />} />
+          <Route path='/service' element={<Services />} />
+          <Route path='/expert' element={<Esperts />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/booking/:serviceId' element={<PrivateRoute>
+            <Booking/>
+          </PrivateRoute>}/>  
+                     
+          <Route path='*' element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
+    </AuthProvider>
   );
 }
 
