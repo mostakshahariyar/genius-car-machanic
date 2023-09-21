@@ -9,6 +9,7 @@ import Navbar from './Pages/Navbar/Navbar';
 import Login from './Pages/Login/Login';
 import PrivateRoute from './Pages/Login/PrivateRoute';
 import AuthProvider from './Pages/context/AuthProvider';
+import AddServices from './Pages/AddServices/AddServices';
 
 function App() {
   return (
@@ -21,10 +22,11 @@ function App() {
           <Route path='/service' element={<Services />} />
           <Route path='/expert' element={<Esperts />} />
           <Route path='/login' element={<Login />} />
+          <Route path='/addServices' element={<AddServices />} />
           <Route path='/booking/:serviceId' element={<PrivateRoute>
-            <Booking/>
-          </PrivateRoute>}/>  
-                     
+            <Booking />
+          </PrivateRoute>} />
+
           <Route path='*' element={<NotFound />} />
         </Routes>
       </BrowserRouter>

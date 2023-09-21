@@ -1,0 +1,19 @@
+div h1 {
+        text-align: center;
+        margin-top: 100px;
+}
+
+
+.form-group {
+        margin-top: 90px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+}
+
+.form-group input {
+        width: 50%;
+        margin-bottom: 5px;
+        padding: 10px;
+}
